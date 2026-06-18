@@ -1,0 +1,84 @@
+body {
+	font-family: "Segoe UI", sans-serif;
+	background-color: #f5f4f2;
+	margin: 20px;
+}
+
+.form {
+	max-width: 350px;
+	margin: 0 auto;
+	background-color: #fff;
+	border: 1px solid;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.fieldset-1,
+.fieldset-2 {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.legend {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.label {
+	display: block;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.input {
+	width: 100%;
+	display: block;
+	font-size: 18px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	margin-top: 5px;
+}
+
+.message {
+	display: block;
+	resize: vertical;
+	width: 100%;
+	min-height: 50px;
+	max-height: 200px;
+	font-size: 18px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	margin-top: 5px;
+}
+
+.checkbox {
+	font-size: 18px;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.check {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.button {
+	display: block;
+	margin: 20px auto 0;
+	padding: 8px 20px;
+	font-size: 16px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	cursor: pointer;
+}
