@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Segoe UI", sans-serif;
+	background-color: #f5f4f2;
+	min-height: 100vh;
+}
+
+.form {
+	max-width: 400px;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 5px 5px 20px #b5b5b5;
+}
+
+.fieldset-1,
+.fieldset-2 {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.legend {
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.label {
+	display: block;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.input {
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #808080;
+	padding: 5px 10px;
+	margin-top: 5px;
+}
+
+.message {
+	display: block;
+	resize: vertical;
+	min-height: 50px;
+	max-height: 200px;
+}
+
+.checkbox {
+	display: inline-block;
+	font-weight: 400;
+	cursor: pointer;
+	padding-left: 30px;
+}
+
+.check {
+	position: absolute;
+	appearance: none;
+	outline: none;
+}
+
+.check::after {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	margin-left: -30px;
+	border: 1px solid #808080;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.check:checked::after {
+	background:
+		url("../images/check-icon.svg") no-repeat center,
+		#007bff;
+}
+
+.button {
+	display: block;
+	margin: 0 auto;
+	padding: 8px 20px;
+	font-size: 16px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: opacity 0.2s;
+}
+
+.button:hover,
+.button:focus-visible {
+	transform: translateY(-3px);
+	box-shadow: 2px 2px 5px #808080;
+	outline: none;
+}
+
+.button:active {
+	background-color: #025ec1;
+	transform: translateY(0px);
+	box-shadow: none;
+}
+
+.input:focus-visible,
+.check:focus-visible::after {
+	outline: 2px solid #007bff;
+	outline-offset: 1px;
+}
