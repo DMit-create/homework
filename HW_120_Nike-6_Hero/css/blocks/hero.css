@@ -145,6 +145,10 @@
 	transition: color var(--transition-time);
 }
 
+.hero__details-icon {
+	fill: none;
+}
+
 @media (any-hover: hover) {
 	.hero__details:hover {
 		color: var(--accent-color);
