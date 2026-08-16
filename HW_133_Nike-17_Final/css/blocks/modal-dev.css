@@ -1,0 +1,30 @@
+@media (width > 576px) {
+	.modal-dev {
+		width: min(800px, 80%);
+	}
+}
+
+.modal-dev__content {
+	max-width: 448px;
+	margin: 0 auto;
+}
+
+.modal-dev__icon {
+	display: block;
+	height: auto;
+	margin-inline: auto;
+}
+
+@media (width > 768px) {
+	.modal-dev__icon {
+		width: 120px;
+		margin-bottom: 80px;
+	}
+}
+
+@media (width <= 768px) {
+	.modal-dev__icon {
+		width: 90px;
+		margin-bottom: 50px;
+	}
+}

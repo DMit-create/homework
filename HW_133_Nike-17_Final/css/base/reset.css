@@ -1,0 +1,54 @@
+/* Базовый сброс стандартных стилей браузера */
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+}
+
+button {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+/* Нормализация отображения кнопок в браузерах */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+	-moz-appearance: button;
+	appearance: button;
+	-webkit-appearance: button;
+}
+
+/* Нормализация отображения поля поиска */
+[type="search"] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+	-webkit-appearance: textfield;
+}
