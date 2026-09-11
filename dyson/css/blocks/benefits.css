@@ -1,0 +1,149 @@
+.benefits {
+	background-color: var(--color-white);
+}
+
+.benefits__title {
+	font-family: var(--second-family);
+	font-weight: 900;
+	color: var(--color-dark);
+}
+
+@media (width > 768px) {
+	.benefits__title {
+		font-size: 42px;
+		margin-bottom: 60px;
+	}
+}
+
+@media (width <= 768px) {
+	.benefits__title {
+		font-size: 24px;
+		margin-bottom: 40px;
+	}
+}
+
+@media (width <= 576px) {
+	.benefits__title {
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+}
+
+.benefits__list {
+	display: grid;
+	gap: 20px;
+}
+
+@media (width > 1150px) {
+	.benefits__list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (width <= 1150px) {
+	.benefits__list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (width <= 680px) {
+	.benefits__list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.benefits__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 280px;
+	padding-top: 26px;
+	gap: 15px;
+	box-shadow: 0 4px 41px 0 rgba(0, 0, 0, 0.05);
+	background: var(--color-white);
+}
+
+@media (width <= 768px) {
+	.benefits__card {
+		gap: 11px;
+		height: 190px;
+		padding-top: 18px;
+		box-shadow: 0 3px 28px 0 rgba(0, 0, 0, 0.05);
+	}
+}
+
+@media (width <= 576px) {
+	.benefits__card {
+		flex-direction: row;
+		justify-content: flex-start;
+		gap: 43px;
+		border-radius: 3px;
+		height: 116px;
+		padding: 0 0 0 33px;
+	}
+}
+
+.benefits__icon-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 110px;
+	height: 110px;
+}
+
+@media (width <= 768px) {
+	.benefits__icon-box {
+		width: 74px;
+		height: 74px;
+	}
+}
+
+@media (width <= 768px) {
+	.benefits__icon {
+		transform: scale(0.675);
+	}
+}
+
+.benefits__content {
+	text-align: center;
+}
+
+@media (width <= 576px) {
+	.benefits__content {
+		text-align: start;
+	}
+}
+
+.benefits__subtitle {
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: 20px;
+	color: var(--color-black);
+	margin-bottom: 13px;
+}
+
+@media (width <= 768px) {
+	.benefits__subtitle {
+		font-size: 14px;
+		margin-bottom: 8px;
+	}
+}
+
+@media (width <= 576px) {
+	.benefits__subtitle {
+		font-size: 13px;
+	}
+}
+
+.benefits__description {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 130%;
+	color: var(--color-black);
+}
+
+@media (width <= 768px) {
+	.benefits__description {
+		font-size: 12px;
+	}
+}

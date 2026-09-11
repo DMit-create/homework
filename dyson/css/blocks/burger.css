@@ -1,0 +1,107 @@
+.burger {
+	/* ПЕРЕМЕННЫЕ ДЛЯ ЭЛЕМЕНТОВ КНОПКИ */
+	--burger-size: 50px;
+	--burger-line-width: 32px;
+	--burger-line-height: 3px;
+	--burger-line-offset: 10px;
+
+	position: relative;
+	z-index: 3;
+
+	/* СКРЫТИЕ ВСЕГДА, КРОМЕ @media */
+	display: none;
+
+	/* КОРОБКА БУРГЕРА */
+	width: var(--burger-size);
+	height: var(--burger-size);
+
+	/* СБРОС, ЕСЛИ НЕТ НА button */
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+/* ОТОБРАЖЕНИЕ КНОПКИ */
+@media (width <= 992px) {
+	.burger {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* ОТСТУП ОТ КНОПКИ (ПО НЕОБХОДИМОСТИ) */
+.header__burger {
+	margin-inline-end: 40px;
+}
+
+@media (width <= 576px) {
+	.header__burger {
+		margin-inline-end: 25px;
+	}
+}
+
+/* ЦЕНТРАЛЬНАЯ ЛИНИЯ - РОДИТЕЛЬ */
+.burger__line {
+	position: relative;
+	width: var(--burger-line-width);
+	height: var(--burger-line-height);
+	border-radius: 2px;
+	background-color: var(--color-white);
+	transition: background-color var(--transition-time);
+}
+
+/* ВЕРХНЯЯ И НИЖНЯЯ ЛИНИЯ - ДЕТИ */
+.burger__line::before,
+.burger__line::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	background-color: var(--color-white);
+	transition: transform var(--transition-time);
+}
+
+/* ПРИ --open СКРЫТИЕ ЦЕНТРАЛЬНОЙ ЛИНИИ */
+.burger--open .burger__line {
+	background-color: transparent;
+}
+
+/* ТРАНСФОРМАЦИЯ ИЗ БУРГЕРА В КРЕСТИК И НАОБОРОТ */
+.burger--open .burger__line::before {
+	transform: translateY(0) rotate(45deg);
+}
+
+.burger--open .burger__line::after {
+	transform: translateY(0) rotate(-45deg);
+}
+
+.burger__line::before {
+	transform: translateY(calc(var(--burger-line-offset) * -1));
+}
+
+.burger__line::after {
+	transform: translateY(var(--burger-line-offset));
+}
+
+/* АДАПТИВ КНОПОК И ЭЛЕМЕНТОВ, ЕСЛИ НУЖЕН */
+@media (width <= 768px) {
+	.burger {
+		--burger-size: 40px;
+		--burger-line-width: 26px;
+		--burger-line-height: 2.6px;
+		--burger-line-offset: 8px;
+	}
+}
+
+@media (width <= 576px) {
+	.burger {
+		--burger-size: 30px;
+		--burger-line-width: 19px;
+		--burger-line-height: 1.5px;
+		--burger-line-offset: 6px;
+	}
+}

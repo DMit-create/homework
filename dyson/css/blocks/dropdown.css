@@ -1,0 +1,32 @@
+/* ====== Стили кнопки ===== */
+.dropdown__button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 25px;
+	border: 1px solid var(--color-accent);
+	border-radius: 3px;
+	padding: 7px 25px 8px;
+	cursor: pointer;
+}
+
+.dropdown__value {
+	font-size: 18px;
+	color: var(--color-dark);
+}
+
+/* ====== Custom иконка ===== */
+.dropdown__icon {
+	/* Так-как в спрайте fill="currentColor" */
+	color: var(--color-dark);
+}
+
+@media (width <= 768px) {
+	.dropdown__button {
+		padding: 6px 15px 7px;
+	}
+
+	.dropdown__value {
+		font-size: 12px;
+	}
+}

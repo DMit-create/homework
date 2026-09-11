@@ -1,0 +1,509 @@
+.special-offers {
+	background-color: var(--color-light);
+}
+
+.special-offers__title {
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: 46px;
+	line-height: 110%;
+	color: var(--color-dark);
+	margin-bottom: 50px;
+}
+
+.special-offers__count {
+	color: var(--color-accent);
+}
+
+@media (width <= 768px) {
+	.special-offers__title {
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+}
+
+@media (width <= 576px) {
+	.special-offers__title {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+.special-offers__filters {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	margin-bottom: 50px;
+}
+
+.special-offers__tags {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+@media (width <= 768px) {
+	.special-offers__tags {
+		gap: 8px;
+	}
+}
+
+@media (width <= 576px) {
+	.special-offers__tags {
+		gap: 10px;
+	}
+}
+
+@media (width <= 768px) {
+	.special-offers__tag-item--extra {
+		display: none;
+	}
+}
+
+.special-offers__tag {
+	display: block;
+	padding: 6px 20px 7px;
+	border: 1px solid var(--color-dark);
+	border-radius: 31px;
+	font-size: 18px;
+	color: var(--color-dark);
+	cursor: pointer;
+}
+
+@media (width <= 768px) {
+	.special-offers__tag {
+		font-size: 12px;
+	}
+}
+
+.special-offers__show-more {
+	justify-self: end;
+	align-self: center;
+	font-weight: 400;
+	font-size: 18px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid var(--color-accent);
+	color: var(--color-accent);
+	cursor: pointer;
+}
+
+@media (width <= 768px) {
+	.special-offers__show-more {
+		font-size: 12px;
+		padding-bottom: 1px;
+	}
+}
+
+/* ========================================
+   Здесь только 
+   Позиционирование кнопки 
+   Остальное в dropdown.css
+======================================== */
+.special-offers__sort {
+	display: flex;
+	justify-content: end;
+	margin-bottom: 40px;
+}
+/* ========================================
+   Dropdown
+   Пере используемый, кастомный 
+   UI-компонент
+   Остальное в dropdown.css
+======================================== */
+
+.special-offers__products {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	margin-bottom: 130px;
+}
+
+.product-card {
+	display: flex;
+	flex-direction: column;
+	max-width: 440px;
+	height: 100%;
+	border-radius: 3px;
+	box-shadow: 0 4px 41px 0 rgba(0, 0, 0, 0.05);
+	background: var(--color-white);
+	overflow: hidden;
+}
+
+.product-card__image img {
+	display: block;
+}
+
+.product-card__title {
+	font-weight: 300;
+	font-size: 24px;
+	color: var(--color-dark);
+	padding: 40px 40px 0;
+}
+
+.product-card__wrapper {
+	padding: 40px;
+	margin-top: auto;
+}
+
+.product-card__meta {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.product-card__availability {
+	font-weight: 400;
+	font-size: 18px;
+	color: #68ae5c;
+}
+
+.product-card__availability::before {
+	content: "";
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	border-radius: 100%;
+	background-color: #68ae5c;
+	margin-right: 20px;
+}
+
+.product-card__discount {
+	display: block;
+	border-radius: 3px;
+	padding: 10px 20px;
+	background-color: var(--color-accent);
+	font-weight: 400;
+	font-size: 24px;
+	color: var(--color-light);
+}
+
+.product-card__prices {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.product-card__price {
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: 42px;
+	color: var(--color-dark);
+}
+
+.product-card__old-price {
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: 24px;
+	text-decoration: line-through;
+	color: #ababab;
+}
+
+.product-card__price,
+.product-card__old-price {
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.product-card__actions {
+	display: flex;
+	justify-content: space-between;
+}
+
+.product-card__quantity {
+	display: flex;
+	justify-content: space-between;
+	padding: 23px 35px;
+	width: 50%;
+}
+
+.product-card__quantity-minus {
+	display: flex;
+	color: #ababab;
+}
+
+.product-card__quantity-value {
+	font-size: 24px;
+	line-height: 0%;
+	color: var(--color-dark);
+}
+
+.product-card__quantity-plus {
+	display: flex;
+	color: var(--color-dark);
+}
+
+.product-card__add {
+	width: 50%;
+	background-color: var(--color-dark);
+	font-size: 24px;
+	color: var(--color-light);
+	transition: background-color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+	.product-card__add:hover {
+		background-color: var(--color-accent);
+	}
+}
+
+/* ==width <= 1320px== */
+@media (width <= 1320px) {
+	.product-card__title {
+		padding: 40px 20px 0;
+	}
+
+	.product-card__wrapper {
+		padding: 40px 20px;
+	}
+}
+
+/* ==width <= 1200px== */
+@media (width <= 1200px) {
+	.product-card__title {
+		font-size: 20px;
+	}
+
+	.product-card__availability {
+		font-size: 16px;
+	}
+
+	.product-card__discount {
+		font-size: 21px;
+	}
+
+	.product-card__price {
+		font-size: 32px;
+	}
+
+	.product-card__old-price {
+		font-size: 20px;
+	}
+
+	.product-card__quantity-value {
+		font-size: 20px;
+	}
+
+	.product-card__add {
+		font-size: 20px;
+	}
+
+	.product-card__quantity {
+		padding: 10px 20px;
+	}
+}
+
+/* ==width <= 1020px== */
+@media (width <= 1020px) {
+	.product-card__title {
+		font-size: 16px;
+	}
+
+	.product-card__availability::before {
+		width: 10px;
+		height: 10px;
+	}
+
+	.product-card__availability {
+		font-size: 14px;
+	}
+
+	.product-card__discount {
+		font-size: 16px;
+	}
+
+	.product-card__price {
+		font-size: 28px;
+	}
+
+	.product-card__old-price {
+		font-size: 18px;
+	}
+
+	.product-card__quantity-value {
+		font-size: 18px;
+	}
+
+	.product-card__add {
+		font-size: 18px;
+	}
+
+	.product-card__quantity {
+		padding: 10px 20px;
+		display: none;
+	}
+
+	.product-card__add {
+		width: 100%;
+		height: 52px;
+	}
+}
+
+/* ==width <= 855px== */
+@media (width <= 855px) {
+	.product-card__title {
+		font-size: 12px;
+		padding: 10px 12px 0;
+	}
+
+	.product-card__wrapper {
+		padding: 12px;
+	}
+
+	.product-card__availability::before {
+		width: 8px;
+		height: 8px;
+		margin-right: 12px;
+	}
+
+	.product-card__availability {
+		font-size: 12px;
+	}
+
+	.product-card__meta {
+		margin-bottom: 5px;
+	}
+
+	.product-card__discount {
+		font-size: 16px;
+		padding: 3px 10px;
+	}
+
+	.product-card__price {
+		font-size: 20px;
+	}
+
+	.product-card__old-price {
+		font-size: 12px;
+	}
+
+	.product-card__add {
+		font-size: 16px;
+	}
+
+	.product-card__add {
+		height: 36px;
+	}
+
+	.special-offers__products {
+		margin-bottom: 40px;
+	}
+}
+
+@media (width <= 750px) {
+	.special-offers__products {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+	}
+}
+
+/* ==width <= 420px== */
+@media (width <= 420px) {
+	.special-offers__products {
+		margin-bottom: 30px;
+	}
+
+	.product-card__title {
+		font-size: 10px;
+		padding: 10px 12px 0;
+	}
+
+	.product-card__availability::before {
+		margin-right: 8px;
+	}
+
+	.product-card__availability {
+		font-size: 10px;
+	}
+
+	.product-card__discount {
+		font-size: 15px;
+		padding: 3px 10px;
+	}
+
+	.product-card__price {
+		font-size: 17px;
+	}
+
+	.product-card__old-price {
+		font-size: 12px;
+	}
+
+	.product-card__add {
+		font-size: 15px;
+	}
+
+	.product-card__add {
+		height: 36px;
+	}
+}
+/* Скрытие 2 карочек на телефоне */
+@media (width <= 576px) {
+	.product-card:nth-child(n + 5) {
+		display: none;
+	}
+}
+
+.special-offers__slider-controls {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.special-offers__slider-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 64px;
+	height: 64px;
+	border: 1px solid var(--color-dark);
+	border-radius: 3px;
+	color: var(--color-dark);
+	cursor: pointer;
+	transition:
+		color var(--transition-time),
+		border-color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+	.special-offers__slider-button:not(:disabled):hover {
+		color: var(--color-accent);
+		border-color: var(--color-accent);
+	}
+}
+
+.special-offers__slider-button:disabled {
+	color: #ababab;
+	border-color: #ababab;
+	cursor: not-allowed;
+}
+
+.special-offers__slider-button--prev .slider-icon {
+	transform: rotate(180deg);
+}
+
+.slider-icon {
+	width: 35px;
+	height: 30px;
+}
+
+.special-offers__slider-counter {
+	font-size: 24px;
+	color: var(--color-dark);
+}
+
+@media (width <= 855px) {
+	.special-offers__slider-button {
+		width: 36px;
+		height: 36px;
+	}
+
+	.slider-icon {
+		width: 20px;
+		height: 18px;
+	}
+
+	.special-offers__slider-counter {
+		font-size: 16px;
+	}
+}

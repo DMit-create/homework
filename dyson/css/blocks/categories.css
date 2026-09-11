@@ -1,0 +1,138 @@
+.categories {
+	background-color: var(--color-white);
+}
+
+.categories__list {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 20px;
+}
+
+@media (width <=768px) {
+	.categories__list {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 10px;
+	}
+}
+
+.categories__item {
+	max-width: 325px;
+	border-radius: 3px;
+	overflow: hidden;
+	background-color: var(--color-white);
+	box-shadow: 0 4px 41px 0 rgba(0, 0, 0, 0.05);
+}
+
+.categories__card {
+	display: block;
+	height: 100%;
+}
+
+.categories__image {
+	display: block;
+}
+
+.categories__content {
+	padding: 20px 40px 30px;
+	transition: background-color var(--transition-time);
+}
+
+.categories__title {
+	display: block;
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: 30px;
+	margin-bottom: 11px;
+	color: var(--color-dark);
+	transition: color var(--transition-time);
+}
+
+.categories__more {
+	display: flex;
+	align-items: center;
+	width: fit-content;
+	gap: 20px;
+}
+
+.categories__more-text {
+	font-size: 24px;
+	color: var(--color-dark);
+	transition: color var(--transition-time);
+}
+
+.categories__arrow-right {
+	width: 21px;
+	height: 20px;
+	color: var(--color-dark);
+	transition: color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+	.categories__card:hover .categories__content {
+		background-color: var(--color-dark);
+		border-radius: 0 0 10px 10px;
+	}
+
+	.categories__card:hover .categories__title,
+	.categories__card:hover .categories__more-text {
+		color: var(--color-white);
+	}
+
+	.categories__card:hover .categories__arrow-right {
+		color: var(--color-white);
+	}
+}
+
+@media (width <= 1400px) {
+	/* min-width 768px, max-width 1400px */
+	.categories__title {
+		font-size: clamp(16px, -0.063rem + 2.22vw, 30px);
+	}
+
+	.categories__more-text {
+		font-size: clamp(0.75rem, -0.161rem + 1.9vw, 1.5rem);
+	}
+}
+
+@media (width <= 1250px) {
+	.categories__content {
+		padding: 20px 20px 30px;
+	}
+
+	.categories__title {
+		margin-bottom: 8px;
+	}
+
+	.categories__more {
+		gap: 14px;
+	}
+
+	.categories__arrow-right {
+		width: 15px;
+		height: 15px;
+	}
+}
+
+@media (width <= 768px) {
+	.categories__content {
+		padding: 10px 12px 15px;
+	}
+
+	.categories__title {
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+
+	.categories__more {
+		gap: 8px;
+	}
+
+	.categories__more-text {
+		font-size: 12px;
+	}
+
+	.categories__arrow-right {
+		width: 10px;
+		height: 10px;
+	}
+}
